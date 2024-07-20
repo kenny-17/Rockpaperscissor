@@ -24,40 +24,29 @@ choice.forEach(userchoice => {
         else
         aichoose="Scissor";
 
-        if(whatclicked==="r" && comp==="s"){
-            yourscore=yourscore+1;
-            winmsg.innerText=`You Won , AI choose ${aichoose}`
-            winmsg.classList.remove('vis');
-            winmsg.style.backgroundColor = 'green';
-        }
+        if ((whatclicked === "r" && comp === "s") ||
+        (whatclicked === "s" && comp === "p") ||
+        (whatclicked === "p" && comp === "r")) {
         
-        else if(whatclicked==="s" && comp==="p"){
-            yourscore=yourscore+1;
-            winmsg.innerText=`You Won , AI choose ${aichoose}`
-            winmsg.classList.remove('vis');
-            winmsg.style.backgroundColor = 'green';
-        }
+        yourscore += 1;
+        winmsg.innerText = `You Won, AI chose ${aichoose}`;
+        winmsg.classList.remove('vis');
+        winmsg.style.backgroundColor = 'green';
+    
+    } else if (whatclicked === comp) {
         
-        else if(whatclicked==="p" && comp==="r"){
-            yourscore=yourscore+1;
-            winmsg.innerText=`You Won , AI choose ${aichoose}`
-            winmsg.classList.remove('vis');
-            winmsg.style.backgroundColor = 'green';
-        }
+        winmsg.innerText = `DRAW!!!, AI chose ${aichoose}`;
+        winmsg.classList.remove('vis');
+        winmsg.style.backgroundColor = 'black';
+    
+    } else {
         
-        if(whatclicked===comp){
-            
-            winmsg.innerText=`DRAW!!! , AI choose ${aichoose}`
-            winmsg.classList.remove('vis');
-            winmsg.style.backgroundColor = 'black';
-        }
-
-        else{
-            Ai=Ai+1;
-            winmsg.innerText=`Uh-OH , AI WON!! by choosing ${aichoose}`
-            winmsg.classList.remove('vis');
-            winmsg.style.backgroundColor = 'red';
-        }
+        Ai += 1;
+        winmsg.innerText = `Uh-OH, AI WON!! by choosing ${aichoose}`;
+        winmsg.classList.remove('vis');
+        winmsg.style.backgroundColor = 'red';
+    }
+    
 
     let    you=document.querySelector(".you");
         you.innerText=yourscore;
