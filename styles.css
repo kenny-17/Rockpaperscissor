@@ -1,0 +1,93 @@
+body{
+    text-align: center;
+    background-color: #E5A9A9;
+    margin: 0px 0px 0px 0px;
+
+}
+.HEADING{
+    text-align: center;
+    background-color: #AF4D98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15vh;
+    height: 15vh;
+    width: 100%;
+}
+
+.rock{
+    height: 20vh;
+    width: 20vh;
+    font-size: 12vh;
+    border-radius: 50%;
+    background-color: #D66BA0;
+}
+.Scissor{
+    height: 20vh;
+    width: 20vh;
+    font-size: 12vh;
+    border-radius: 50%;
+    background-color: #F4E4BA;
+    transform: rotate(90deg);
+}
+.paper{
+    height: 20vh;
+    width: 20vh;
+    font-size: 12vh;
+    border-radius: 50%;
+    background-color: #9DF7E5;
+}
+.choose{
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.choose button {
+    border: 1vmin solid transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.choose button:hover {
+    border-color: black;
+}
+
+.scores{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    gap: 15vmin;
+    font-size: 10vh;
+    
+}
+.names{
+    
+    display: flex;
+    justify-content: center;
+    gap: 15vmin;
+    font-weight: bold;
+    font-size: 3vh;
+    margin-top: 1vh;    
+}
+
+.winmsg {
+    background-color: #28a745;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.winmsg.vis {
+    visibility: hidden;
+    opacity: 0;
+}
